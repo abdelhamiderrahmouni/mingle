@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Contracts\HasMingles;
+use App\Traits\InteractsWithMingles;
+use Livewire\Component;
+use Illuminate\Support\Collection;
+
+class {{ class }} extends Component implements HasMingles
+{
+    use InteractsWithMingles;
+
+    public function component(): string
+    {
+        return '{{ $mingleFilePath }}';
+    }
+
+    public function mingleData(): array
+    {
+        return [
+            'message' => 'Message in a bottle 🍾',
+        ];
+    }
+
+    public function doubleIt($amount)
+    {
+        return $amount * 2;
+    }
+}
