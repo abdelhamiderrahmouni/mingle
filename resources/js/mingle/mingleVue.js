@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import debounce from "./directives/debounce.js";
+import throttle from "./directives/throttle.js";
 
 const defaultOptions = {
     autoMount: true,
@@ -38,6 +40,9 @@ const createComponent = (mingleId, wireId, component, options = defaultOptions) 
     }
 
     const app = createApp(component, props)
+
+    app.directive('debounce', debounce)
+    app.directive('throttle', throttle)
 
     if (options.autoMount) {
         app.mount(el)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function {{ $basename }}({wire, ...props}) {
+export default function ({wire, ...props}) {
 
     const message = props.mingleData.message
 
@@ -18,4 +18,4 @@ function {{ $basename }}({wire, ...props}) {
     )
 }
 
-export default {{ $basename }}
+// export default {{ $basename }}
