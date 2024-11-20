@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {StrictMode} from 'react'
 import { motion } from "motion/react";
+import {APIProvider} from "@vis.gl/react-google-maps";
+import DrawingExample from './drawing-example';
 
 export default function () {
     return (
@@ -12,6 +14,13 @@ export default function () {
             >
                 Hiii there
             </motion.div>
+
+
+            <StrictMode>
+                <APIProvider apiKey={'AIzaSyCnUXZCyMGzaQM2bBx2tYE1TX7_bS2HktU'}>
+                    <DrawingExample />
+                </APIProvider>
+            </StrictMode>
         </div>
     );
 }
